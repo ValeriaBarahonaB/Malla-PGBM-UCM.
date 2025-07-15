@@ -1,5 +1,5 @@
 const ramos = {
- 1: [
+  1: [
     { nombre: "Construcción del Ser Docente y Rol Pedagógico", id: "rol", requisitos: [] },
     { nombre: "Historia de la Educación en Chile y Políticas Públicas", id: "historia", requisitos: [] },
     { nombre: "Lenguaje y Comunicación", id: "lenguaje", requisitos: [] },
@@ -146,3 +146,4 @@ function guardarProgreso() {
 }
 
 crearMalla();
+
