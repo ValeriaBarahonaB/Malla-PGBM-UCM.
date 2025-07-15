@@ -4,7 +4,6 @@ body {
   color: #333;
   margin: 0;
   padding: 20px;
-  font-size: 0.95em;
 }
 
 h1 {
@@ -42,6 +41,7 @@ h1 {
   padding: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 0.95em;
 }
 
 .ramo:hover {
