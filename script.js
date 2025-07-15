@@ -75,17 +75,14 @@ const ramos = {
     { nombre: "Práctica Profesional", id: "practica", requisitos: ["tp9"] }
   ]
 };
-
 let aprobados = new Set(JSON.parse(localStorage.getItem("aprobados") || "[]"));
 
 function crearMalla() {
   const malla = document.getElementById("malla");
-
   for (let i = 1; i <= 10; i++) {
     const sem = document.createElement("div");
     sem.className = "semestre";
     sem.innerHTML = `<h2>Semestre ${i}</h2>`;
-
     (ramos[i] || []).forEach(r => {
       const div = document.createElement("div");
       div.className = "ramo";
@@ -93,20 +90,15 @@ function crearMalla() {
       div.dataset.id = r.id;
       div.dataset.requisitos = JSON.stringify(r.requisitos);
       div.onclick = () => toggleRamo(div);
-
       if (aprobados.has(r.id)) {
         div.classList.add("aprobado");
       }
-
       sem.appendChild(div);
     });
-
     malla.appendChild(sem);
   }
-
   actualizarBloqueos();
 }
-
 function toggleRamo(div) {
   const id = div.dataset.id;
   const requisitos = JSON.parse(div.dataset.requisitos);
